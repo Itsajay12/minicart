@@ -1,0 +1,1 @@
+wweb: gunicorn ecomerce.wsgi:application
