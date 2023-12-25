@@ -1,0 +1,147 @@
+$color-face: #26bdc5;
+.page{
+  margin:auto;
+  // despaneted: 600px;
+}
+.robot{
+  margin:auto;
+  margin-top: 200px;
+  transform: rotateY(10deg);
+  position: relative;
+  width: fit-content;
+  .head{
+    box-shadow: 2px 0 10px #49888f inset;
+    margin: auto;
+    background-color: #67bfcd;
+    width: 100px;
+    height: 110px;
+    border-radius: 30px;
+    position: relative;
+    .face{
+      .eye{
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        position:absolute;
+        border-radius: 50%;
+        box-shadow: 0 0 5px #777 inset;
+        &::after{
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          background-color: #000;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+        }
+      }
+      .eye-right{
+        top: 23px;
+        left: 27px;
+      }
+      .eye-left{
+        top: 23px;
+        right: 27px;
+      }
+      .nose{
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        width: 6px;
+        height: 14px;
+        background-color: $color-face;
+        transform: translate(-50%, -50%);
+        border-radius: 10px;
+        box-shadow: 0 0 2px #08080882 inset;
+      }
+      .mouth{
+        bottom: 30px;
+        width: 30px;
+        height: 6px;
+        background-color: $color-face;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 10px;
+        box-shadow: 0 0 4px #49888f inset;
+        animation: speak .1s linear infinite alternate paused;
+      }
+      .ear{
+        position: absolute;
+        border-radius: 10px;
+        height: 30px;
+        width: 10px;
+        top: 50px;
+        background-color: $color-face;
+        box-shadow: 0 0 2px #08080882 inset;
+
+      }
+      .ear-right{
+        right: -8px;
+      }
+      .ear-left{
+        left: -8px;
+      }
+    }
+  }
+  .body2{
+    .belly{
+      box-shadow: 5px 0 13px #49888f inset ,0px 0 20px #49888f inset;
+      position: relative;
+      margin: auto;
+      background-color: #39a5b7;
+      width: 180px;
+      height: 150px;
+      border-radius: 50px;
+    }
+    .hand{
+      height: 60px;
+      width: 20px;
+      background-color: #11b5bd;
+      border-radius: 20px;
+      position: absolute;
+      top: 50%;
+      box-shadow: 0 0 10px #0000004f inset;
+      transform: translateY(-50%);
+      .palm{
+
+      }
+    }
+    .hand-right{
+      right: -10px;
+    }
+    .hand-left{
+      left: -10px;
+    }
+  }
+  .chat{
+    position: absolute;
+    min-width: 140px;
+    border-radius: 90px;
+    border: 1px solid #ccd4dd;
+    bottom: 243px;
+    left: 170px;
+    overflow: hidden;
+    padding: 30px 30px;
+    border-bottom-left-radius: 8px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #3b83ad;
+    box-shadow: 0 0 7px #eee;
+  }
+  p{
+    margin: 0;
+  }
+}
+@keyframes speak{
+  from{
+    background-color: $color-face;
+  }
+  to{
+    background-color: #fff;
+  }
+}
