@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-n9dkwhci61b)qtxfnv%p$#aiju681#@bo5fgqlfwu2xi+j7*w)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['minicart-production.up.railway.app']
+
 
 
 
